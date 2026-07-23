@@ -1,0 +1,3036 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #fff;
+            scroll-behavior: smooth;
+          }
+          a {
+            color: oklch(75% 0.12 75);
+          }
+          a:hover {
+            color: oklch(85% 0.13 75);
+          }
+          ::selection {
+            background: oklch(75% 0.12 75 / 0.3);
+          }
+          #guia-flex {
+            display: flex;
+            flex-direction: column;
+          }
+          #amuleto-flex {
+            display: flex;
+            flex-direction: column;
+          }
+          #hoje-flex {
+            display: flex;
+            flex-direction: column;
+          }
+          @media (min-width: 720px) {
+            #guia-flex {
+              flex-direction: row-reverse;
+              align-items: flex-start;
+              gap: 40px;
+            }
+            #guia-flex > .guia-img {
+              flex: 0 0 260px;
+              margin: 0 !important;
+            }
+            #guia-flex > .guia-text {
+              flex: 1;
+            }
+            #amuleto-flex {
+              flex-direction: row;
+              align-items: flex-start;
+              gap: 40px;
+            }
+            #amuleto-flex > .amuleto-img {
+              flex: 0 0 260px;
+              margin: 0 !important;
+            }
+            #amuleto-flex > .amuleto-text {
+              flex: 1;
+            }
+            #hoje-flex {
+              flex-direction: row;
+              align-items: flex-start;
+              gap: 40px;
+            }
+            #hoje-flex > .hoje-img {
+              flex: 0 0 260px;
+              margin: 0 !important;
+            }
+            #hoje-flex > .hoje-text {
+              flex: 1;
+            }
+          }
+          #page-content > section:not(#topo) {
+            position: relative;
+            overflow: hidden;
+          }
+          #page-content > section:not(#topo)::after {
+            content: "\05E9";
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 320px;
+            line-height: 1;
+            font-family: serif;
+            color: oklch(20% 0.01 60 / 0.025);
+            pointer-events: none;
+            z-index: 0;
+          }
+          #oferta-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+          @media (min-width: 560px) {
+            #oferta-grid {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+        </style>
+      </helmet>
+
+      <div id="page-content" style="background: #fff; min-height: 100vh">
+        <!-- HERO -->
+        <section
+          id="topo"
+          style="
+            position: relative;
+            padding: 140px 24px 100px;
+            text-align: center;
+            background-image:
+              linear-gradient(
+                oklch(10% 0.01 40 / 0.72),
+                oklch(10% 0.01 40 / 0.8)
+              ),
+              url(&quot;./assets/hero-bg.png&quot;);
+            background-size: cover;
+            background-position: center;
+          "
+        >
+          <div style="max-width: 680px; margin: 0 auto">
+            <span
+              style="
+                display: block;
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 13px;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: oklch(80% 0.13 75);
+                margin-bottom: 28px;
+              "
+              >Ritual de Limpeza e Proteção</span
+            >
+            <div
+              style="
+                text-align: center;
+                margin-bottom: 24px;
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 16px;
+                color: oklch(80% 0.1 75 / 0.7);
+                letter-spacing: 0.35em;
+              "
+            >
+              ◆ ✦ ◆
+            </div>
+            <h1
+              style="
+                font-family: &quot;Cormorant Garamond&quot;, serif;
+                font-weight: 500;
+                font-size: clamp(34px, 7vw, 52px);
+                line-height: 1.2;
+                color: oklch(98% 0.006 60);
+                margin: 0 0 32px;
+              "
+            >
+              Transforme Objetos Pessoais em Amuletos de Proteção Espiritual
+              Contra a Inveja
+            </h1>
+            <p
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 20px;
+                line-height: 1.8;
+                color: oklch(90% 0.012 60);
+                margin: 0 0 40px;
+                text-align: left;
+              "
+            >
+              Descubrar como purificar e consagrar um objeto pessoal ou uma
+              ferramenta de trabalho pelos quatro elementos sagrados, criando
+              uma âncora simbólica de proteção, paz e harmonia em 35 minutos, na
+              sua casa.
+            </p>
+            <ul
+              style="
+                list-style: none;
+                padding: 0;
+                margin: 0 0 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                text-align: left;
+              "
+            >
+              <li
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  font-weight: 400;
+                  line-height: 1.6;
+                  color: oklch(85% 0.012 60);
+                  padding-left: 26px;
+                  position: relative;
+                "
+              >
+                <span
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    color: oklch(80% 0.13 75);
+                    font-size: 11px;
+                  "
+                  >◆</span
+                >Retire da ferramenta as energias negativas acumuladas durante
+                contatos com pessoas e ambientes diferentes.
+              </li>
+              <li
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  font-weight: 400;
+                  line-height: 1.6;
+                  color: oklch(85% 0.012 60);
+                  padding-left: 26px;
+                  position: relative;
+                "
+              >
+                <span
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    color: oklch(80% 0.13 75);
+                    font-size: 11px;
+                  "
+                  >◆</span
+                >Firme sobre a ferramenta uma intenção de proteção que dificulta
+                a aproximação de novas influências inferiores.
+              </li>
+              <li
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  font-weight: 400;
+                  line-height: 1.6;
+                  color: oklch(85% 0.012 60);
+                  padding-left: 26px;
+                  position: relative;
+                "
+              >
+                <span
+                  style="
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    color: oklch(80% 0.13 75);
+                    font-size: 11px;
+                  "
+                  >◆</span
+                >Volte a atender, produzir e decidir com mais segurança
+                energética durante sua rotina profissional.
+              </li>
+            </ul>
+
+            <a
+              href="#hoje"
+              style="
+                display: flex;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+                gap: 8px;
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: oklch(80% 0.13 75);
+                border-bottom: 1px solid oklch(80% 0.13 75 / 0.4);
+                padding-bottom: 4px;
+              "
+              >Quero Transformar Agora →</a
+            >
+          </div>
+        </section>
+
+        <!-- INDEX -->
+        <section
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 56px 24px 72px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+            border-bottom: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <button
+            onClick="{{ toggleIndex }}"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              width: 100%;
+              background: none;
+              border: none;
+              cursor: pointer;
+              padding: 0;
+              margin-bottom: 24px;
+            "
+          >
+            <span
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 13px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: oklch(75% 0.12 75);
+              "
+              >Índice</span
+            >
+            <span
+              style="font-size:12px; color:oklch(75% 0.12 75); transform:{{ chevronTransform }}; transition:transform 0.2s;"
+              >▾</span
+            >
+          </button>
+          <ol
+            style="list-style:none; padding:0; margin:0; display:{{ indexDisplay }}; flex-direction:column; gap:14px; counter-reset:idx;"
+          >
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >I.</span
+              ><a
+                href="#sinais"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Certas interações desarmonizam suas energias</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >II.</span
+              ><a
+                href="#ciclo"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Esse peso invade descanso, relações e trabalho</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >III.</span
+              ><a
+                href="#corpo"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Você purifica o corpo; a ferramenta continua carregada</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >IV.</span
+              ><a
+                href="#ferramenta"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Sua ferramenta pode devolver energias antigas</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >V.</span
+              ><a
+                href="#amuleto"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Você transforma sua ferramenta em amuleto de proteção</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >VI.</span
+              ><a
+                href="#protecao"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Sua proteção acompanha cada novo contato</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >VII.</span
+              ><a
+                href="#outros-objetos"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Você transforma outros objetos em amuletos de proteção</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >VIII.</span
+              ><a
+                href="#paginas"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Você evita mais de 600 páginas de estudo</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >IX.</span
+              ><a
+                href="#elementos"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Ar dispersa, Fogo transforma, Água harmoniza, Terra firma</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >X.</span
+              ><a
+                href="#purificacao"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Purificação remove; consagração protege próximos contatos</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >XI.</span
+              ><a
+                href="#guia"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Um guia para criar seu amuleto de proteção</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
+                padding-bottom: 12px;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >XII.</span
+              ><a
+                href="#acesso"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Desbloqueie seu acesso permanente e definitivo</a
+              >
+            </li>
+            <li
+              style="
+                display: flex;
+                gap: 16px;
+                align-items: baseline;
+                padding-bottom: 0;
+              "
+            >
+              <span
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 16px;
+                  color: oklch(75% 0.12 75);
+                  min-width: 34px;
+                "
+                >XIII.</span
+              ><a
+                href="#hoje"
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 17px;
+                  color: oklch(28% 0.014 60);
+                  text-decoration: none;
+                "
+                >Consagre ainda hoje seu primeiro objeto</a
+              >
+            </li>
+          </ol>
+        </section>
+
+        <!-- I -->
+        <section
+          id="sinais"
+          style="max-width: 680px; margin: 0 auto; padding: 72px 24px"
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.16 25 / 0.6);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(68% 0.16 25);
+              margin-bottom: 16px;
+            "
+            >I.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Certas interações desarmonizam suas energias
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você começar o dia em paz e sentir suas energias mudarem depois de
+            um atendimento, uma conversa difícil ou algumas horas em um ambiente
+            carregado.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Uma sensação de peso aparece no corpo, embora nada visível tenha
+              acontecido.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Seu foco diminui justamente quando você ainda precisa atender,
+              decidir ou produzir.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >A interação termina, mas a tensão, o cansaço ou a insegurança
+              continuam com você.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Quando esses sinais se repetem, o custo aparece na paz que você
+            perde, na presença que falta e no trabalho que rende menos.
+          </p>
+          <a
+            href="#ciclo"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(68% 0.16 25);
+              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero Evitar Esses Sinais →</a
+          >
+        </section>
+
+        <!-- II -->
+        <section
+          id="ciclo"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.16 25 / 0.6);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(68% 0.16 25);
+              margin-bottom: 16px;
+            "
+            >II.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Esse peso invade descanso, relações e trabalho
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            O expediente termina, mas as influências acumuladas podem ocupar as
+            horas que deveriam restaurar sua energia.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você chega em casa com menos disposição para conversar, descansar
+              ou estar presente com quem importa.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você acorda no dia seguinte antes de recuperar completamente a
+              paz e a firmeza que precisa para trabalhar.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você hesita em conversas, adia decisões e deixa oportunidades
+              passarem justamente quando seus resultados dependem da sua
+              atuação.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Interromper esse ciclo devolve o descanso à sua noite e mais
+            segurança ao seu próximo dia de trabalho.
+          </p>
+          <a
+            href="#corpo"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(68% 0.16 25);
+              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero interromper esse ciclo →</a
+          >
+        </section>
+
+        <!-- III -->
+        <section
+          id="corpo"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.16 25 / 0.6);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(68% 0.16 25);
+              margin-bottom: 16px;
+            "
+            >III.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você purifica o corpo; a ferramenta continua carregada
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você cuida das energias do corpo e sente alívio. Na manhã seguinte,
+            volta a segurar a mesma ferramenta de trabalho que participou de
+            cada contato do dia anterior.
+          </p>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-size: 20px;
+              font-style: italic;
+              line-height: 1.8;
+              color: oklch(30% 0.014 60);
+              margin: 0 0 28px;
+              padding-left: 20px;
+              border-left: 2px solid oklch(68% 0.16 25 / 0.5);
+            "
+          >
+            A ferramenta permaneceu próxima enquanto pessoas, ambientes e
+            estados energéticos diferentes atravessavam sua rotina. Enquanto
+            você limpou as energias do corpo, o acúmulo conservado nela
+            permaneceu sem purificação — e, ao voltar para suas mãos, pode
+            reaproximar as influências que você tentou deixar para trás.
+          </p>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Por isso, o alívio pode durar apenas até o momento em que você
+            retoma a ferramenta e começa outro dia de trabalho.
+          </p>
+          <a
+            href="#ferramenta"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(68% 0.16 25);
+              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero proteção completa →</a
+          >
+        </section>
+
+        <!-- IV -->
+        <section
+          id="ferramenta"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.16 25 / 0.6);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(68% 0.16 25);
+              margin-bottom: 16px;
+            "
+            >IV.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Sua ferramenta pode devolver energias antigas
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Tesouras, pentes, chaves, instrumentos de atendimento e outros
+            objetos de trabalho atravessam pessoas e ambientes justamente
+            enquanto você atende, produz e gera renda.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Contato após contato, a ferramenta pode conservar marcas
+              energéticas de diferentes situações.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Entre um dia e outro, essas energias permanecem ligadas ao objeto
+              que voltará para suas mãos.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(68% 0.16 25);
+                  font-size: 11px;
+                "
+                >◆</span
+              >No próximo uso, o peso pode reaparecer quando você mais precisa
+              de presença, firmeza e segurança profissional.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Ao purificar sua ferramenta, você interrompe o contato com as
+            energias passadas e abre espaço para firmar uma nova proteção.
+          </p>
+          <a
+            href="#amuleto"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(68% 0.16 25);
+              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero limpar minha ferramenta →</a
+          >
+        </section>
+
+        <!-- V -->
+        <section
+          id="amuleto"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >V.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você transforma sua ferramenta em amuleto de proteção
+          </h2>
+          <div id="amuleto-flex">
+            <div class="amuleto-img">
+              <img
+                src="./assets/amuleto-tesoura.png"
+                alt="Tesoura consagrada com selo místico de proteção"
+                style="
+                  display: block;
+                  max-width: 280px;
+                  width: 100%;
+                  height: auto;
+                  margin: 0 auto 36px;
+                  border-radius: 4px;
+                "
+              />
+            </div>
+            <div class="amuleto-text">
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 19px;
+                  line-height: 1.75;
+                  color: oklch(28% 0.014 60);
+                  margin: 0 0 28px;
+                "
+              >
+                Você purifica a ferramenta, realiza a consagração ritualística
+                na sua casa e transforma o objeto em um amuleto de proteção.
+              </p>
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  margin: 0 0 28px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 14px;
+                "
+              >
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Você direciona e firma na ferramenta uma energia de proteção,
+                  paz e harmonia.
+                </li>
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Você sela essa energia no objeto para dificultar que
+                  influências inferiores se fixem novamente.
+                </li>
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Sua ferramenta mantém a intenção de proteção que você
+                  escolheu e firmou durante o ritual.
+                </li>
+              </ul>
+              <p
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-style: italic;
+                  font-size: 21px;
+                  line-height: 1.6;
+                  color: oklch(22% 0.012 60);
+                  margin: 0 0 32px;
+                "
+              >
+                Em cada novo contato, você mantém sua intenção de proteção perto
+                de si e trabalha com mais segurança, paz e harmonia.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#protecao"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero meu amuleto →</a
+          >
+        </section>
+
+        <!-- VI -->
+        <section
+          id="protecao"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >VI.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Sua proteção acompanha cada novo contato
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Durante os próximos 12 meses, você trabalha com um amuleto que
+            mantém a intenção de proteção, paz e harmonia que você escolheu e
+            firmou.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você começa o trabalho com a segurança de ter preparado
+              energeticamente o objeto que permanecerá em suas mãos.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você atravessa cada novo contato com uma ferramenta protegida
+              contra a fixação de novas energias inferiores.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Você encerra o expediente com menos receio de levar para casa,
+              por meio da ferramenta, o peso energético das interações do dia.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Em vez de esperar o peso aparecer para buscar alívio, você leva a
+            proteção até o ponto onde as trocas acontecem: a ferramenta que
+            permanece em suas mãos.
+          </p>
+          <a
+            href="#outros-objetos"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero proteção no trabalho →</a
+          >
+        </section>
+
+        <!-- VII -->
+        <section
+          id="outros-objetos"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >VII.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você transforma outros objetos em amuletos de proteção
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Depois da primeira consagração, você domina o ritual que transforma
+            outros objetos pessoais ou ferramentas de trabalho em amuletos de
+            proteção. Em cada novo ritual, você escolhe a intenção que deseja
+            firmar.
+          </p>
+          <img
+            src="./assets/outros-objetos.png"
+            alt="Cordão, aliança e relógio consagrados como amuletos de proteção"
+            style="
+              display: block;
+              width: 100%;
+              height: auto;
+              border-radius: 4px;
+              margin: 0 0 28px;
+            "
+          />
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-size: 20px;
+              font-style: italic;
+              line-height: 1.8;
+              color: oklch(30% 0.014 60);
+              margin: 0 0 28px;
+              padding-left: 20px;
+              border-left: 2px solid oklch(75% 0.12 75 / 0.4);
+            "
+          >
+            Você consagra seu cordão para carregar a intenção de proteção perto
+            do corpo; transforma sua aliança em lembrança constante de paz e
+            harmonia; e faz do seu relógio uma âncora de proteção presente em
+            cada momento do dia.
+          </p>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Você realiza uma consagração agora e leva consigo o conhecimento
+            para criar novas âncoras de proteção nos próximos anos.
+          </p>
+          <a
+            href="#paginas"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero mais proteção →</a
+          >
+        </section>
+
+        <!-- VIII -->
+        <section
+          id="paginas"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >VIII.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Você evita mais de 600 páginas de estudo
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Para aprender essa sequência por conta própria, você teria de
+            estudar livros místicos extensos, como o <em>Pangrimorium</em>, uma
+            obra de 657 páginas. Depois da leitura, ainda faltaria transformar
+            ensinamentos separados sobre purificação, quatro elementos e
+            consagração em um ritual simples para realizar na sua casa.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Primeiro, encontrar no meio de centenas de páginas apenas o que
+              serve à consagração da sua ferramenta de trabalho.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Depois, entender palavras escritas para estudantes de misticismo
+              e descobrir a função de cada parte.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >Por fim, organizar a ordem correta para retirar energias passadas
+              antes de firmar proteção, paz e harmonia.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Com um único guia, você evita o trabalho pesado de interpretar
+            ensinamentos dispersos. Em 35 minutos, escolhe o objeto, segue a
+            sequência pronta e o transforma em uma âncora alinhada à sua
+            intenção de proteção.
+          </p>
+          <a
+            href="#elementos"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero o atalho →</a
+          >
+        </section>
+
+        <!-- IX -->
+        <section
+          id="elementos"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >IX.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Ar dispersa, Fogo transforma, Água harmoniza, Terra firma
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Durante 35 minutos, você percorre quatro vias de purificação e
+            proteção. Cada elemento atua de acordo com sua própria qualidade
+            ritualística.
+          </p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+              gap: 16px;
+              margin: 0 0 28px;
+            "
+          >
+            <div
+              style="
+                text-align: center;
+                padding: 24px 14px;
+                border: 1px solid oklch(60% 0.02 60 / 0.4);
+              "
+            >
+              <span
+                style="
+                  display: block;
+                  font-size: 28px;
+                  color: oklch(80% 0.03 250);
+                  margin-bottom: 8px;
+                "
+                >🜁</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 24px;
+                  color: oklch(75% 0.12 75);
+                  margin-bottom: 10px;
+                "
+                >Ar</span
+              >
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 15px;
+                  line-height: 1.5;
+                  color: oklch(30% 0.014 60);
+                  margin: 0;
+                "
+              >
+                Dispersa o acúmulo energético, abrindo espaço para uma nova
+                intenção.
+              </p>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 24px 14px;
+                border: 1px solid oklch(60% 0.02 60 / 0.4);
+              "
+            >
+              <span
+                style="
+                  display: block;
+                  font-size: 28px;
+                  color: oklch(58% 0.2 35);
+                  margin-bottom: 8px;
+                "
+                >🜂</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 24px;
+                  color: oklch(75% 0.12 75);
+                  margin-bottom: 10px;
+                "
+                >Fogo</span
+              >
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 15px;
+                  line-height: 1.5;
+                  color: oklch(30% 0.014 60);
+                  margin: 0;
+                "
+              >
+                Transforma as influências anteriores e fortalece a proteção
+                escolhida.
+              </p>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 24px 14px;
+                border: 1px solid oklch(60% 0.02 60 / 0.4);
+              "
+            >
+              <span
+                style="
+                  display: block;
+                  font-size: 28px;
+                  color: oklch(60% 0.13 235);
+                  margin-bottom: 8px;
+                "
+                >🜄</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 24px;
+                  color: oklch(75% 0.12 75);
+                  margin-bottom: 10px;
+                "
+                >Água</span
+              >
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 15px;
+                  line-height: 1.5;
+                  color: oklch(30% 0.014 60);
+                  margin: 0;
+                "
+              >
+                Harmoniza a nova energia firmada sobre a ferramenta.
+              </p>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 24px 14px;
+                border: 1px solid oklch(60% 0.02 60 / 0.4);
+              "
+            >
+              <span
+                style="
+                  display: block;
+                  font-size: 28px;
+                  color: oklch(45% 0.1 140);
+                  margin-bottom: 8px;
+                "
+                >🜃</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 24px;
+                  color: oklch(75% 0.12 75);
+                  margin-bottom: 10px;
+                "
+                >Terra</span
+              >
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 15px;
+                  line-height: 1.5;
+                  color: oklch(30% 0.014 60);
+                  margin: 0;
+                "
+              >
+                Firma estabilidade, paz e permanência.
+              </p>
+            </div>
+          </div>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Você segue cada etapa sabendo o que está retirando, o que está
+            acrescentando e como cada movimento prepara a ferramenta para
+            sustentar sua proteção.
+          </p>
+          <a
+            href="#purificacao"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero ativar os elementos →</a
+          >
+        </section>
+
+        <!-- X -->
+        <section
+          id="purificacao"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >X.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Purificação remove; consagração protege próximos contatos
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+            "
+          >
+            Uma limpeza isolada atua sobre o que a ferramenta acumulou até
+            aquele momento. A consagração prepara o objeto para as influências
+            que ainda encontrará durante o trabalho.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0 0 28px;
+              display: flex;
+              flex-direction: column;
+              gap: 14px;
+            "
+          >
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >A purificação retira as energias conservadas nos contatos
+              anteriores.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >A consagração acrescenta uma intenção específica de proteção, paz
+              e harmonia.
+            </li>
+            <li
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 1.6;
+                color: oklch(35% 0.014 60);
+                padding-left: 26px;
+                position: relative;
+              "
+            >
+              <span
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                  color: oklch(75% 0.12 75);
+                  font-size: 11px;
+                "
+                >◆</span
+              >O selamento mantém essa nova função ligada à ferramenta durante
+              os próximos 12 meses.
+            </li>
+          </ul>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 32px;
+            "
+          >
+            Você purifica as energias passadas e firma uma nova proteção sobre
+            sua ferramenta para os próximos contatos.
+          </p>
+          <a
+            href="#guia"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero completar a proteção →</a
+          >
+        </section>
+
+        <!-- XI -->
+        <section
+          id="guia"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >XI.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Um guia para criar seu amuleto de proteção
+          </h2>
+          <div id="guia-flex">
+            <div class="guia-img">
+              <img
+                src="./assets/ebook-cover.png"
+                alt="Capa do Guia Prático Âncora de Proteção Energética"
+                style="
+                  display: block;
+                  max-width: 280px;
+                  width: 100%;
+                  height: auto;
+                  margin: 0 auto 36px;
+                "
+              />
+            </div>
+            <div class="guia-text">
+              <p
+                style="
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 19px;
+                  line-height: 1.75;
+                  color: oklch(28% 0.014 60);
+                  margin: 0 0 28px;
+                "
+              >
+                Com o
+                <em
+                  >Guia Prático do Ritual de Consagração de Objetos Pessoais</em
+                >, você escolhe o objeto, firma sua intenção de proteção e
+                realiza a própria consagração na sua casa.
+              </p>
+              <p
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 20px;
+                  font-style: italic;
+                  line-height: 1.8;
+                  color: oklch(30% 0.014 60);
+                  margin: 0 0 28px;
+                  padding-left: 20px;
+                  border-left: 2px solid oklch(75% 0.12 75 / 0.4);
+                "
+              >
+                Você separa os materiais certos de uma só vez, encontra cada
+                palavra e movimento na ordem certa e avança da primeira
+                purificação ao selamento final sabendo, a cada instante, qual
+                ação realizar em seguida.
+              </p>
+              <p
+                style="
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-style: italic;
+                  font-size: 21px;
+                  line-height: 1.6;
+                  color: oklch(22% 0.012 60);
+                  margin: 0 0 32px;
+                "
+              >
+                Todo o trabalho pesado de reunir, interpretar e ordenar as
+                etapas já foi feito. Você escolhe o objeto, abre o guia,
+                concentra sua atenção na energia que deseja firmar e segue o
+                passo a passo até transformá-lo em um amuleto de proteção.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#acesso"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 8px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(75% 0.12 75);
+              border-bottom: 1px solid oklch(75% 0.12 75 / 0.4);
+              padding-bottom: 4px;
+            "
+            >Quero firmar meu amuleto →</a
+          >
+        </section>
+
+        <!-- XII -->
+        <section
+          id="acesso"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >XII.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Desbloqueie seu acesso permanente e definitivo
+          </h2>
+
+          <div
+            style="
+              max-width: 700px;
+              margin: 0 auto;
+              padding: 40px 32px;
+              background: oklch(15% 0.008 60 / 0.94);
+              border: 1px solid #c5a059;
+              border-radius: 6px;
+              box-shadow:
+                0 0 0 1px oklch(70% 0.12 80 / 0.15) inset,
+                0 12px 40px oklch(10% 0.01 60 / 0.35);
+            "
+          >
+            <p
+              style="
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 19px;
+                line-height: 1.75;
+                color: oklch(90% 0.012 60);
+                margin: 0 0 28px;
+                text-align: center;
+              "
+            >
+              Você domina o ritual e leva esse conheimento místico para sua
+              vida, transformando outros objetos pessoais ou ferramentas de
+              trabalho em amuletos de proteção espiritual contra a inveja.
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                padding: 24px;
+                margin: 0 0 32px;
+                background: oklch(20% 0.01 60 / 0.6);
+                border: 1px dashed #c5a059;
+                border-radius: 6px;
+              "
+            >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 14px;
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  color: oklch(85% 0.02 70);
+                  margin-bottom: 8px;
+                "
+                >Por apenas</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;Cormorant Garamond&quot;, serif;
+                  font-size: 56px;
+                  font-weight: 600;
+                  color: #c5a059;
+                  line-height: 1;
+                "
+                >R$ 32</span
+              >
+              <span
+                style="
+                  display: block;
+                  font-family: &quot;EB Garamond&quot;, serif;
+                  font-size: 14px;
+                  color: oklch(75% 0.015 60);
+                  margin-top: 12px;
+                "
+                >Pagamento único • Sem mensalidades ou assinaturas</span
+              >
+            </div>
+
+            <div id="oferta-grid" style="margin: 0 0 32px">
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <span style="color: #c5a059; font-size: 14px; margin-top: 3px"
+                  >◆</span
+                >
+                <p
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 16px;
+                    line-height: 1.55;
+                    color: oklch(88% 0.012 60);
+                    margin: 0;
+                  "
+                >
+                  <strong style="color: oklch(96% 0.008 60)"
+                    >Pagamento único</strong
+                  >
+                  — você acessa a sequência completa de imediato.
+                </p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <span style="color: #c5a059; font-size: 14px; margin-top: 3px"
+                  >◆</span
+                >
+                <p
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 16px;
+                    line-height: 1.55;
+                    color: oklch(88% 0.012 60);
+                    margin: 0;
+                  "
+                >
+                  <strong style="color: oklch(96% 0.008 60)"
+                    >Consultas ilimitadas</strong
+                  >
+                  — volte às orientações a cada novo objeto consagrado.
+                </p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <span style="color: #c5a059; font-size: 14px; margin-top: 3px"
+                  >✦</span
+                >
+                <p
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 16px;
+                    line-height: 1.55;
+                    color: oklch(88% 0.012 60);
+                    margin: 0;
+                  "
+                >
+                  <strong style="color: oklch(96% 0.008 60)"
+                    >Renovação livre</strong
+                  >
+                  — após 12 meses, use o mesmo guia sem nova compra.
+                </p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <span style="color: #c5a059; font-size: 14px; margin-top: 3px"
+                  >✦</span
+                >
+                <p
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 16px;
+                    line-height: 1.55;
+                    color: oklch(88% 0.012 60);
+                    margin: 0;
+                  "
+                >
+                  <strong style="color: oklch(96% 0.008 60)"
+                    >Sem recorrência</strong
+                  >
+                  — nenhuma assinatura ou cobrança automática.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="#hoje"
+              style="
+                display: block;
+                text-align: center;
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 17px;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: oklch(15% 0.01 60);
+                background: linear-gradient(135deg, #c5a059, #8c6d33);
+                padding: 18px 32px;
+                border-radius: 4px;
+                box-shadow: 0 6px 18px oklch(55% 0.1 75 / 0.35);
+              "
+              style-hover="transform:translateY(-2px); box-shadow:0 10px 26px oklch(55% 0.1 75 / 0.5);"
+              >Quero garantir meu acesso</a
+            >
+            <p
+              style="
+                text-align: center;
+                font-family: &quot;EB Garamond&quot;, serif;
+                font-size: 14px;
+                color: oklch(70% 0.015 60);
+                margin: 16px 0 0;
+              "
+            >
+              🛡️ Acesso imediato após a confirmação
+            </p>
+          </div>
+        </section>
+
+        <!-- XIII -->
+        <section
+          id="hoje"
+          style="
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 72px 24px 140px;
+            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
+            text-align: center;
+          "
+        >
+          <div
+            style="
+              text-align: center;
+              margin-bottom: 20px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              color: oklch(60% 0.05 70 / 0.5);
+              letter-spacing: 0.3em;
+            "
+          >
+            ◆ ✦ ◆
+          </div>
+          <span
+            style="
+              display: block;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 14px;
+              letter-spacing: 0.15em;
+              text-transform: uppercase;
+              color: oklch(75% 0.12 75);
+              margin-bottom: 16px;
+            "
+            >XIII.</span
+          >
+          <h2
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-weight: 500;
+              font-size: clamp(28px, 5.5vw, 38px);
+              line-height: 1.25;
+              color: oklch(15% 0.01 60);
+              margin: 0 0 28px;
+            "
+          >
+            Consagre ainda hoje seu primeiro objeto
+          </h2>
+          <p
+            style="
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 19px;
+              line-height: 1.75;
+              color: oklch(28% 0.014 60);
+              margin: 0 0 28px;
+              text-align: left;
+            "
+          >
+            Hoje, você escolhe um objeto com significado, abre o guia e realiza
+            sua primeira consagração na sua casa.
+          </p>
+          <div id="hoje-flex">
+            <div class="hoje-img">
+              <img
+                src="./assets/hoje-bg.png"
+                alt="Homem consagrado com aliança, cordão e relógio irradiando proteção"
+                style="
+                  display: block;
+                  max-width: 280px;
+                  width: 100%;
+                  height: auto;
+                  margin: 0 auto 28px;
+                  border-radius: 4px;
+                "
+              />
+            </div>
+            <div class="hoje-text">
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  margin: 0 0 28px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 14px;
+                  text-align: left;
+                "
+              >
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Ao concluir o ritual, você reconhece na mesma ferramenta a
+                  intenção de proteção que acabou de firmar.
+                </li>
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >No primeiro contato do dia seguinte, você começa o trabalho
+                  com a segurança de ter completado seu cuidado energético.
+                </li>
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Durante uma interação difícil, o amuleto mantém perto de você
+                  a proteção, a paz e a harmonia que escolheu preservar.
+                </li>
+                <li
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 1.6;
+                    color: oklch(35% 0.014 60);
+                    padding-left: 26px;
+                    position: relative;
+                  "
+                >
+                  <span
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 2px;
+                      color: oklch(75% 0.12 75);
+                      font-size: 11px;
+                    "
+                    >◆</span
+                  >Ao encerrar o expediente, você volta para casa sabendo que
+                  incluiu a ferramenta no cuidado que antes terminava no próprio
+                  corpo.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 21px;
+              line-height: 1.6;
+              color: oklch(22% 0.012 60);
+              margin: 0 0 40px;
+              text-align: left;
+            "
+          >
+            Depois do primeiro objeto, o conhecimento permanece com você para
+            realizar novas consagrações e renovar o ritual após 12 meses usando
+            o mesmo guia.
+          </p>
+          <a
+            href="#topo"
+            style="
+              display: flex;
+              width: fit-content;
+              margin-left: auto;
+              margin-right: auto;
+              align-items: center;
+              gap: 10px;
+              font-family: &quot;EB Garamond&quot;, serif;
+              font-size: 15px;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              text-decoration: none;
+              color: oklch(99% 0.005 60);
+              background: oklch(45% 0.14 25);
+              padding: 16px 32px;
+              border-radius: 2px;
+            "
+            >Quero consagrar agora</a
+          >
+        </section>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script>
+      class Component extends DCLogic {
+        state = { indexOpen: true };
+        renderVals() {
+          return {
+            indexDisplay: this.state.indexOpen ? 'flex' : 'none',
+            chevronTransform: this.state.indexOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+            toggleIndex: () => this.setState(s => ({ indexOpen: !s.indexOpen }))
+          };
+        }
+      }
+    </script>
+  </body>
+</html>
