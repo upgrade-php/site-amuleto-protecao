@@ -157,6 +157,16 @@
             transform: translateY(0);
             box-shadow: 0 4px 12px oklch(35% 0.1 145 / 0.3);
           }
+          .cta-tagline {
+            text-align: center;
+            font-family: "EB Garamond", serif;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.5;
+            color: oklch(42% 0.014 60);
+            margin: 12px auto 0;
+            max-width: 34em;
+          }
           #faq details {
             border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
             padding: 0;
@@ -218,54 +228,73 @@
             flex-direction: column;
             gap: 8px;
           }
-          #guia-flex {
+          /* Splits L/R alternados */
+          .split {
             display: flex;
             flex-direction: column;
           }
-          #amuleto-flex {
-            display: flex;
-            flex-direction: column;
+          .split > .split-media {
+            width: 100%;
           }
-          #hoje-flex {
-            display: flex;
-            flex-direction: column;
+          .split > .split-media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 36px;
+            border-radius: 4px;
+          }
+          .split > .split-body {
+            flex: 1;
+            min-width: 0;
+          }
+          .split-elements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 0 0 28px;
           }
           @media (min-width: 720px) {
-            #guia-flex {
+            .split.split-lr,
+            .split.split-rl {
+              align-items: flex-start;
+              gap: 40px;
+            }
+            .split.split-lr {
+              flex-direction: row;
+            }
+            .split.split-rl {
               flex-direction: row-reverse;
-              align-items: flex-start;
-              gap: 40px;
             }
-            #guia-flex > .guia-img {
+            .split > .split-media {
               flex: 0 0 260px;
-              margin: 0 !important;
+              width: auto;
             }
-            #guia-flex > .guia-text {
-              flex: 1;
+            .split > .split-media img {
+              margin: 0 auto;
             }
-            #amuleto-flex {
-              flex-direction: row;
-              align-items: flex-start;
-              gap: 40px;
+            .split.split-media-wide > .split-media {
+              flex: 0 0 300px;
             }
-            #amuleto-flex > .amuleto-img {
-              flex: 0 0 260px;
-              margin: 0 !important;
+            .split-elements {
+              margin: 0;
             }
-            #amuleto-flex > .amuleto-text {
-              flex: 1;
-            }
-            #hoje-flex {
-              flex-direction: row;
-              align-items: flex-start;
-              gap: 40px;
-            }
-            #hoje-flex > .hoje-img {
-              flex: 0 0 260px;
-              margin: 0 !important;
-            }
-            #hoje-flex > .hoje-text {
-              flex: 1;
+          }
+          /* Garantia: texto flui sob o selo */
+          #garantia .garantia-wrap {
+            overflow: auto;
+          }
+          #garantia .garantia-selo {
+            display: block;
+            width: 180px;
+            max-width: 42%;
+            height: auto;
+            margin: 0 auto 24px;
+          }
+          @media (min-width: 720px) {
+            #garantia .garantia-selo {
+              float: left;
+              max-width: 200px;
+              margin: 4px 32px 16px 0;
             }
           }
           #page-content > section:not(#topo) {
@@ -294,6 +323,78 @@
             #oferta-grid {
               grid-template-columns: 1fr 1fr;
             }
+          }
+
+          /* Zebra de seções — full-bleed, sem mint */
+          #page-content > section.zebra {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 80px 24px;
+            border-top: none;
+          }
+          #page-content > section.zebra > .zebra-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+          }
+          #page-content > section.zebra-warm {
+            background:
+              radial-gradient(
+                ellipse 80% 60% at 50% 0%,
+                oklch(97% 0.02 75 / 0.9),
+                transparent 70%
+              ),
+              linear-gradient(
+                180deg,
+                oklch(96% 0.018 70),
+                oklch(93.5% 0.022 65)
+              );
+          }
+          #page-content > section.zebra-wine {
+            background:
+              radial-gradient(
+                ellipse 70% 50% at 80% 20%,
+                oklch(92% 0.04 25 / 0.55),
+                transparent 65%
+              ),
+              linear-gradient(
+                180deg,
+                oklch(95% 0.028 30),
+                oklch(92.5% 0.032 25)
+              );
+          }
+          #page-content > section.zebra-dark {
+            background:
+              radial-gradient(
+                ellipse 90% 70% at 50% 0%,
+                oklch(22% 0.03 40 / 0.9),
+                transparent 65%
+              ),
+              linear-gradient(
+                165deg,
+                oklch(16% 0.018 45),
+                oklch(11% 0.014 50) 55%,
+                oklch(14% 0.02 35)
+              );
+          }
+          #page-content > section.zebra-warm::after,
+          #page-content > section.zebra-wine::after {
+            color: oklch(20% 0.02 40 / 0.035);
+          }
+          #page-content > section.zebra-dark::after {
+            color: oklch(92% 0.01 70 / 0.045);
+          }
+          #page-content > section.zebra-dark .zebra-kicker {
+            color: oklch(78% 0.1 75) !important;
+          }
+          #page-content > section.zebra-dark .zebra-ornament {
+            color: oklch(75% 0.08 75 / 0.55) !important;
+          }
+          #page-content > section.zebra-dark .zebra-title {
+            color: oklch(97% 0.008 60) !important;
           }
         </style>
       </helmet>
@@ -984,10 +1085,8 @@
         </section>
 
         <!-- I -->
-        <section
-          id="sinais"
-          style="max-width: 680px; margin: 0 auto; padding: 72px 24px"
-        >
+        <section id="sinais" class="zebra zebra-warm">
+          <div class="zebra-inner">
           <div
             style="
               text-align: center;
@@ -1025,6 +1124,19 @@
           >
             A sobrecarga invisível que rouba sua energia diária
           </h2>
+          <div class="split split-rl">
+            <div class="split-media">
+              <img
+                src="./assets/hero-bg.png"
+                alt="Atmosfera ritualística de proteção energética"
+                style="
+                  aspect-ratio: 3 / 4;
+                  object-fit: cover;
+                  object-position: center;
+                "
+              />
+            </div>
+            <div class="split-body">
           <p
             style="
               font-family: &quot;EB Garamond&quot;, serif;
@@ -1135,6 +1247,8 @@
             <mark>paz que você perde</mark>, na presença que falta e no trabalho
             que rende menos.
           </p>
+            </div>
+          </div>
           <a
             href="#guia"
             style="
@@ -1156,6 +1270,11 @@
             "
             >Quero Evitar Esses Sinais →</a
           >
+          <p class="cta-tagline">
+            (Você não precisa continuar terminando seus dias esgotado sem
+            entender o motivo.)
+          </p>
+          </div>
         </section>
 
         <!-- II -->
@@ -1336,6 +1455,10 @@
             "
             >Quero interromper esse ciclo →</a
           >
+          <p class="cta-tagline">
+            (Seu tempo de descanso com quem você ama é precioso demais para ser
+            roubado pelo peso do expediente.)
+          </p>
         </section>
 
         <!-- III -->
@@ -1451,6 +1574,10 @@
             "
             >Quero proteção completa →</a
           >
+          <p class="cta-tagline">
+            (De nada adianta cuidar da sua mente se a ferramenta que você segura
+            o dia todo continua carregada.)
+          </p>
         </section>
 
         <!-- IV -->
@@ -1631,13 +1758,17 @@
             "
             >Quero limpar minha ferramenta →</a
           >
+          <p class="cta-tagline">
+            (Sua ferramenta de trabalho deve gerar sua renda, não guardar a
+            tensão de quem passou por você.)
+          </p>
         </section>
 
         <!-- V -->
         <section
           id="amuleto"
           style="
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 72px 24px;
             border-top: 1px solid oklch(60% 0.02 60 / 0.35);
@@ -1680,22 +1811,14 @@
           >
             Bloqueie a inveja nos seus objetos de trabalho
           </h2>
-          <div id="amuleto-flex">
-            <div class="amuleto-img">
+          <div class="split split-lr">
+            <div class="split-media">
               <img
                 src="./assets/amuleto-tesoura.png"
                 alt="Tesoura consagrada com selo místico de proteção"
-                style="
-                  display: block;
-                  max-width: 280px;
-                  width: 100%;
-                  height: auto;
-                  margin: 0 auto 36px;
-                  border-radius: 4px;
-                "
               />
             </div>
-            <div class="amuleto-text">
+            <div class="split-body">
               <p
                 style="
                   font-family: &quot;EB Garamond&quot;, serif;
@@ -1828,6 +1951,10 @@
             "
             >Quero meu amuleto →</a
           >
+          <p class="cta-tagline">
+            (Transforme o objeto que você já usa no seu maior escudo diário de
+            proteção.)
+          </p>
         </section>
 
         <!-- VI -->
@@ -2008,13 +2135,17 @@
             "
             >Quero proteção no trabalho →</a
           >
+          <p class="cta-tagline">
+            (Esteja blindado antes mesmo da primeira conversa difícil do seu dia
+            começar.)
+          </p>
         </section>
 
         <!-- VII -->
         <section
           id="outros-objetos"
           style="
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 72px 24px;
             border-top: 1px solid oklch(60% 0.02 60 / 0.35);
@@ -2071,17 +2202,14 @@
             proteção. Em cada novo ritual, você escolhe a intenção que deseja
             firmar.
           </p>
-          <img
-            src="./assets/outros-objetos.png"
-            alt="Cordão, aliança e relógio consagrados como amuletos de proteção"
-            style="
-              display: block;
-              width: 100%;
-              height: auto;
-              border-radius: 4px;
-              margin: 0 0 28px;
-            "
-          />
+          <div class="split split-rl">
+            <div class="split-media">
+              <img
+                src="./assets/outros-objetos.png"
+                alt="Cordão, aliança e relógio consagrados como amuletos de proteção"
+              />
+            </div>
+            <div class="split-body">
           <p
             style="
               font-family: &quot;Cormorant Garamond&quot;, serif;
@@ -2113,6 +2241,8 @@
             Você realiza uma consagração agora e leva consigo o conhecimento
             para criar novas âncoras de proteção nos próximos anos.
           </p>
+            </div>
+          </div>
           <a
             href="#guia"
             style="
@@ -2134,6 +2264,10 @@
             "
             >Quero mais proteção →</a
           >
+          <p class="cta-tagline">
+            (Aprenda a técnica uma única vez e proteja qualquer acessório que
+            você usa no corpo.)
+          </p>
         </section>
 
         <!-- VIII -->
@@ -2318,18 +2452,15 @@
             "
             >Quero o atalho →</a
           >
+          <p class="cta-tagline">
+            (Por que perder meses decifrando textos complexos se você pode
+            aplicar o ritual correto em 35 minutos?)
+          </p>
         </section>
 
         <!-- IX -->
-        <section
-          id="elementos"
-          style="
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 72px 24px;
-            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
-          "
-        >
+        <section id="elementos" class="zebra zebra-wine">
+          <div class="zebra-inner">
           <div
             style="
               text-align: center;
@@ -2537,7 +2668,7 @@
                   margin: 0;
                 "
               >
-                Sela o ritual no objeto para firmar a estabilidade..
+                Sela o ritual no objeto para firmar a estabilidade.
               </p>
             </div>
           </div>
@@ -2576,6 +2707,11 @@
             "
             >Quero ativar os elementos →</a
           >
+          <p class="cta-tagline">
+            (Aprenda exatamente o que fazer em cada etapa, sem incertezas ou
+            improvisos.)
+          </p>
+          </div>
         </section>
 
         <!-- X -->
@@ -2756,13 +2892,17 @@
             "
             >Quero completar a proteção →</a
           >
+          <p class="cta-tagline">
+            (Não basta tirar o acúmulo do passado; garanta que novas energias
+            não voltem a se fixar.)
+          </p>
         </section>
 
         <!-- XI -->
         <section
           id="guia"
           style="
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 72px 24px;
             border-top: 1px solid oklch(60% 0.02 60 / 0.35);
@@ -2805,21 +2945,14 @@
           >
             Proteja sua energia com um ritual simples
           </h2>
-          <div id="guia-flex">
-            <div class="guia-img">
+          <div class="split split-rl">
+            <div class="split-media">
               <img
                 src="./assets/ebook-cover.png"
                 alt="Capa do Guia Prático Âncora de Proteção Energética"
-                style="
-                  display: block;
-                  max-width: 280px;
-                  width: 100%;
-                  height: auto;
-                  margin: 0 auto 36px;
-                "
               />
             </div>
-            <div class="guia-text">
+            <div class="split-body">
               <p
                 style="
                   font-family: &quot;EB Garamond&quot;, serif;
@@ -2870,19 +3003,17 @@
             </div>
           </div>
           <a href="#acesso" class="cta-btn-green">Quero firmar meu amuleto →</a>
+          <p class="cta-tagline">
+            (Tenha em mãos o passo a passo exato para realizar sua primeira
+            consagração hoje.)
+          </p>
         </section>
 
         <!-- XII -->
-        <section
-          id="acesso"
-          style="
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 72px 24px;
-            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
-          "
-        >
+        <section id="acesso" class="zebra zebra-dark">
+          <div class="zebra-inner">
           <div
+            class="zebra-ornament"
             style="
               text-align: center;
               margin-bottom: 20px;
@@ -2896,6 +3027,7 @@
             ◆ ✦ ◆
           </div>
           <span
+            class="zebra-kicker"
             style="
               display: block;
               font-family: &quot;EB Garamond&quot;, serif;
@@ -2908,6 +3040,7 @@
             >XII.</span
           >
           <h2
+            class="zebra-title"
             style="
               font-family: &quot;Cormorant Garamond&quot;, serif;
               font-weight: 500;
@@ -3053,7 +3186,7 @@
                   "
                 >
                   <strong style="color: oklch(96% 0.008 60)"
-                    >Renovação livre</strong
+                    >Sem Renovação</strong
                   >
                   — após 12 meses, use o mesmo guia sem nova compra.
                 </p>
@@ -3087,6 +3220,10 @@
               style="width: 100%; box-sizing: border-box"
               >Quero garantir meu acesso</a
             >
+            <p class="cta-tagline" style="color: oklch(78% 0.015 60)">
+              (Um investimento único e irrisório para manter sua proteção
+              ativada para sempre.)
+            </p>
             <p
               style="
                 text-align: center;
@@ -3099,13 +3236,14 @@
               🛡️ Acesso imediato após a confirmação
             </p>
           </div>
+          </div>
         </section>
 
         <!-- XIII -->
         <section
           id="garantia"
           style="
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 72px 24px;
             border-top: 1px solid oklch(60% 0.02 60 / 0.35);
@@ -3136,19 +3274,14 @@
             "
             >XIII.</span
           >
-          <img
-            src="./assets/selo-garantia-7-dias.webp"
-            alt="Selo Risco Zero — Garantia de 7 dias"
-            width="180"
-            height="180"
-            style="
-              display: block;
-              width: 180px;
-              max-width: 45%;
-              height: auto;
-              margin: 0 auto 24px;
-            "
-          />
+          <div class="garantia-wrap">
+            <img
+              class="garantia-selo"
+              src="./assets/selo-garantia-7-dias.webp"
+              alt="Selo Risco Zero — Garantia de 7 dias"
+              width="180"
+              height="180"
+            />
           <h2
             style="
               font-family: &quot;Cormorant Garamond&quot;, serif;
@@ -3217,9 +3350,6 @@
               list-style: none;
               padding: 0;
               margin: 0 0 36px;
-              display: flex;
-              flex-direction: column;
-              gap: 16px;
             "
           >
             <li
@@ -3230,6 +3360,7 @@
                 color: oklch(35% 0.014 60);
                 padding-left: 28px;
                 position: relative;
+                margin: 0 0 16px;
               "
             >
               <span
@@ -3257,6 +3388,7 @@
                 color: oklch(35% 0.014 60);
                 padding-left: 28px;
                 position: relative;
+                margin: 0 0 16px;
               "
             >
               <span
@@ -3283,6 +3415,7 @@
                 color: oklch(35% 0.014 60);
                 padding-left: 28px;
                 position: relative;
+                margin: 0;
               "
             >
               <span
@@ -3302,6 +3435,7 @@
               atender com total segurança.
             </li>
           </ul>
+          </div>
 
           <h3
             style="
@@ -3359,18 +3493,15 @@
           <a href="#hoje" class="cta-btn-green"
             >Sim, quero experimentar a proteção sem risco por 7 dias →</a
           >
+          <p class="cta-tagline">
+            (Sinta a leveza na sua rotina na prática — ou receba todo o seu
+            dinheiro de volta.)
+          </p>
         </section>
 
         <!-- XIV -->
-        <section
-          id="faq"
-          style="
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 72px 24px;
-            border-top: 1px solid oklch(60% 0.02 60 / 0.35);
-          "
-        >
+        <section id="faq" class="zebra zebra-warm">
+          <div class="zebra-inner">
           <div
             style="
               text-align: center;
@@ -3633,13 +3764,14 @@
               </div>
             </details>
           </div>
+          </div>
         </section>
 
         <!-- XV -->
         <section
           id="hoje"
           style="
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
             padding: 72px 24px 140px;
             border-top: 1px solid oklch(60% 0.02 60 / 0.35);
@@ -3696,22 +3828,14 @@
             Hoje, você escolhe um objeto com significado, abre o guia e realiza
             sua <mark>primeira consagração na sua casa</mark>.
           </p>
-          <div id="hoje-flex">
-            <div class="hoje-img">
+          <div class="split split-rl">
+            <div class="split-media">
               <img
                 src="./assets/hoje-bg.png"
                 alt="Homem consagrado com aliança, cordão e relógio irradiando proteção"
-                style="
-                  display: block;
-                  max-width: 280px;
-                  width: 100%;
-                  height: auto;
-                  margin: 0 auto 28px;
-                  border-radius: 4px;
-                "
               />
             </div>
-            <div class="hoje-text">
+            <div class="split-body">
               <ul
                 style="
                   list-style: none;
@@ -3839,6 +3963,10 @@
             o mesmo guia.
           </p>
           <a href="#topo" class="cta-btn-green">Quero consagrar agora</a>
+          <p class="cta-tagline">
+            (O seu próximo dia de trabalho pode ser infinitamente mais leve. A
+            escolha está nas suas mãos.)
+          </p>
         </section>
       </main>
     </x-dc>
