@@ -84,14 +84,14 @@
             }
           }
           a {
-            color: oklch(50% 0.12 75);
+            color: oklch(42% 0.12 75);
           }
           a:hover {
-            color: oklch(42% 0.12 75);
+            color: oklch(36% 0.12 75);
           }
           a:focus-visible,
           button:focus-visible {
-            outline: 2px solid oklch(50% 0.12 75);
+            outline: 2px solid oklch(42% 0.12 75);
             outline-offset: 3px;
           }
           a.cta-btn-green:focus-visible {
@@ -196,13 +196,13 @@
             font-family: "EB Garamond", serif;
             font-size: 22px;
             line-height: 1;
-            color: oklch(50% 0.12 75);
+            color: oklch(42% 0.12 75);
           }
           #faq details[open] summary::after {
             content: "−";
           }
           #faq summary:focus-visible {
-            outline: 2px solid oklch(50% 0.12 75);
+            outline: 2px solid oklch(42% 0.12 75);
             outline-offset: 3px;
           }
           #faq .faq-answer {
@@ -297,9 +297,42 @@
               margin: 4px 32px 16px 0;
             }
           }
+          /* #hoje: imagem quebra o limite da section à direita */
+          @media (min-width: 720px) {
+            #hoje .split > .split-media {
+              position: relative;
+              z-index: 1;
+              overflow: visible;
+              flex: 0 0 260px;
+              width: 260px;
+              max-width: 260px;
+              height: 280px;
+              aspect-ratio: auto;
+            }
+            #hoje .split > .split-media img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: min(380px, calc(260px + max(0px, (100vw - 720px) / 4)));
+              max-width: none;
+              height: 280px;
+              object-fit: cover;
+              object-position: left center;
+              margin: 0;
+            }
+            #hoje .split > .split-body {
+              flex: 1 1 auto;
+              min-width: 0;
+              position: relative;
+              z-index: 2;
+            }
+          }
           #page-content > section:not(#topo) {
             position: relative;
             overflow: hidden;
+          }
+          #page-content > section#hoje {
+            overflow: visible;
           }
           #page-content > section:not(#topo)::after {
             content: "\05E9";
@@ -399,7 +432,7 @@
 
           /* Destaque em duas cores nas headlines */
           .hl {
-            color: oklch(48% 0.14 70);
+            color: oklch(42% 0.14 70);
           }
           #topo .hl,
           .zebra-dark .hl {
@@ -661,13 +694,13 @@
                   font-size: 13px;
                   letter-spacing: 0.2em;
                   text-transform: uppercase;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                 "
                 >Índice</span
               >
               <span
                 aria-hidden="true"
-                style="font-size:12px; color:oklch(50% 0.12 75); transform:{{ chevronTransform }}; transition:transform 0.2s;"
+                style="font-size:12px; color:oklch(42% 0.12 75); transform:{{ chevronTransform }}; transition:transform 0.2s;"
                 >▾</span
               >
             </button>
@@ -688,7 +721,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >I.</span
@@ -716,7 +749,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >II.</span
@@ -744,7 +777,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >III.</span
@@ -772,7 +805,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >IV.</span
@@ -800,7 +833,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >V.</span
@@ -828,7 +861,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >VI.</span
@@ -856,7 +889,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >VII.</span
@@ -884,7 +917,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >VIII.</span
@@ -912,7 +945,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >IX.</span
@@ -940,7 +973,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >X.</span
@@ -968,7 +1001,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >XI.</span
@@ -996,7 +1029,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >XII.</span
@@ -1024,7 +1057,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >XIII.</span
@@ -1052,7 +1085,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >XIV.</span
@@ -1079,7 +1112,7 @@
                   style="
                     font-family: &quot;Cormorant Garamond&quot;, serif;
                     font-size: 16px;
-                    color: oklch(50% 0.12 75);
+                    color: oklch(42% 0.12 75);
                     min-width: 34px;
                   "
                   >XV.</span
@@ -1107,7 +1140,7 @@
               margin-bottom: 20px;
               font-family: &quot;EB Garamond&quot;, serif;
               font-size: 14px;
-              color: oklch(60% 0.16 25 / 0.6);
+              color: oklch(45% 0.16 25 / 0.65);
               letter-spacing: 0.3em;
             "
             aria-hidden="true"
@@ -1121,7 +1154,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               margin-bottom: 16px;
             "
             >I.</span
@@ -1142,8 +1175,8 @@
           <div class="split split-rl">
             <div class="split-media">
               <img
-                src="./assets/hero-bg.png"
-                alt="Atmosfera ritualística de proteção energética"
+                src="./assets/energias-negativas.png"
+                alt="Energias negativas e tensão acumuladas no dia a dia"
                 style="
                   aspect-ratio: 3 / 4;
                   object-fit: cover;
@@ -1192,7 +1225,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1216,7 +1249,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1240,7 +1273,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1279,7 +1312,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
               padding-bottom: 4px;
             "
@@ -1308,7 +1341,7 @@
               margin-bottom: 20px;
               font-family: &quot;EB Garamond&quot;, serif;
               font-size: 14px;
-              color: oklch(60% 0.16 25 / 0.6);
+              color: oklch(45% 0.16 25 / 0.65);
               letter-spacing: 0.3em;
             "
             aria-hidden="true"
@@ -1322,7 +1355,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               margin-bottom: 16px;
             "
             >II.</span
@@ -1380,7 +1413,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1404,7 +1437,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1428,7 +1461,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1465,7 +1498,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
               padding-bottom: 4px;
             "
@@ -1493,7 +1526,7 @@
               margin-bottom: 20px;
               font-family: &quot;EB Garamond&quot;, serif;
               font-size: 14px;
-              color: oklch(60% 0.16 25 / 0.6);
+              color: oklch(45% 0.16 25 / 0.65);
               letter-spacing: 0.3em;
             "
             aria-hidden="true"
@@ -1507,7 +1540,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               margin-bottom: 16px;
             "
             >III.</span
@@ -1585,7 +1618,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
               padding-bottom: 4px;
             "
@@ -1613,7 +1646,7 @@
               margin-bottom: 20px;
               font-family: &quot;EB Garamond&quot;, serif;
               font-size: 14px;
-              color: oklch(60% 0.16 25 / 0.6);
+              color: oklch(45% 0.16 25 / 0.65);
               letter-spacing: 0.3em;
             "
             aria-hidden="true"
@@ -1627,7 +1660,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               margin-bottom: 16px;
             "
             >IV.</span
@@ -1686,7 +1719,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1710,7 +1743,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1734,7 +1767,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(68% 0.16 25);
+                  color: oklch(48% 0.16 25);
                   font-size: 11px;
                 "
                 >◆</span
@@ -1770,7 +1803,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(68% 0.16 25);
+              color: oklch(48% 0.16 25);
               border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
               padding-bottom: 4px;
             "
@@ -1812,7 +1845,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >V.</span
@@ -1878,7 +1911,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -1902,7 +1935,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -1926,7 +1959,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -1964,7 +1997,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2006,7 +2039,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >VI.</span
@@ -2064,7 +2097,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2088,7 +2121,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2112,7 +2145,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2149,7 +2182,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2191,7 +2224,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >VII.</span
@@ -2279,7 +2312,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2321,7 +2354,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >VIII.</span
@@ -2382,7 +2415,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2406,7 +2439,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2430,7 +2463,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2468,7 +2501,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2503,7 +2536,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >IX.</span
@@ -2562,7 +2595,7 @@
                   display: block;
                   font-family: &quot;Cormorant Garamond&quot;, serif;
                   font-size: 24px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   margin-bottom: 10px;
                 "
                 >Ar</span
@@ -2600,7 +2633,7 @@
                   display: block;
                   font-family: &quot;Cormorant Garamond&quot;, serif;
                   font-size: 24px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   margin-bottom: 10px;
                 "
                 >Fogo</span
@@ -2638,7 +2671,7 @@
                   display: block;
                   font-family: &quot;Cormorant Garamond&quot;, serif;
                   font-size: 24px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   margin-bottom: 10px;
                 "
                 >Água</span
@@ -2676,7 +2709,7 @@
                   display: block;
                   font-family: &quot;Cormorant Garamond&quot;, serif;
                   font-size: 24px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   margin-bottom: 10px;
                 "
                 >Terra</span
@@ -2723,7 +2756,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2766,7 +2799,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >X.</span
@@ -2825,7 +2858,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2849,7 +2882,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2873,7 +2906,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -2909,7 +2942,7 @@
               letter-spacing: 0.1em;
               text-transform: uppercase;
               text-decoration: none;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
               padding-bottom: 4px;
             "
@@ -2951,7 +2984,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >XI.</span
@@ -3058,7 +3091,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >XII.</span
@@ -3294,7 +3327,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >XIII.</span
@@ -3395,7 +3428,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -3423,7 +3456,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -3450,7 +3483,7 @@
                   position: absolute;
                   left: 0;
                   top: 2px;
-                  color: oklch(50% 0.12 75);
+                  color: oklch(42% 0.12 75);
                   font-size: 11px;
                 "
                 >◆</span
@@ -3548,7 +3581,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >XIV.</span
@@ -3824,7 +3857,7 @@
               font-size: 14px;
               letter-spacing: 0.15em;
               text-transform: uppercase;
-              color: oklch(50% 0.12 75);
+              color: oklch(42% 0.12 75);
               margin-bottom: 16px;
             "
             >XV.</span
@@ -3890,7 +3923,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -3914,7 +3947,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -3938,7 +3971,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
@@ -3962,7 +3995,7 @@
                       position: absolute;
                       left: 0;
                       top: 2px;
-                      color: oklch(50% 0.12 75);
+                      color: oklch(42% 0.12 75);
                       font-size: 11px;
                     "
                     >◆</span
