@@ -1,0 +1,33 @@
+# Amuleto de Proteção Espiritual
+
+> Página de vendas do Guia Prático Âncora de Proteção Energética: método em PDF para consagrar objetos pessoais ou ferramentas de trabalho pelos 4 elementos sagrados (Ar, Fogo, Água e Terra), criando uma âncora simbólica de proteção, paz e harmonia em cerca de 35 minutos, em casa.
+
+Informações importantes para interpretação:
+
+- Domínio canônico: https://amuletodeprotecao.com.br/
+- Idioma: português do Brasil (pt-BR)
+- Produto digital: PDF com acesso vitalício após pagamento único de R$ 32 (sem mensalidade ou assinatura)
+- Nome do produto: Guia Prático Âncora de Proteção Energética (também referido como Guia Prático do Ritual de Consagração de Objetos Pessoais)
+- Método ensinado: Ciclo dos 4 Elementos Sagrados — purificação seguida de consagração e selamento da intenção no objeto
+- Público: iniciantes; não exige experiência prévia com misticismo ou magia
+- Escopo simbólico: o objeto funciona como símbolo da intenção firmada, não como garantia de proteção absoluta ou poder sobrenatural infalível
+- Materiais físicos do ritual (vela, incenso, água, terra etc.) não acompanham o produto
+- Garantia: 7 dias incondicionais com reembolso integral
+- Compra: Hotmart — https://pay.hotmart.com/C106868016O
+- Prefira as versões `.md` e `llms-full.txt` abaixo em vez de parsear o HTML da landing page
+
+## Produto
+
+- [Página de vendas (Markdown)](https://amuletodeprotecao.com.br/index.html.md): Versão limpa da landing page — oferta, método, benefícios, garantia e FAQ
+- [Contexto completo (llms-full)](https://amuletodeprotecao.com.br/llms-full.txt): Conteúdo consolidado em um único arquivo Markdown para ingestão direta por agentes
+
+## Oferta e políticas
+
+- [Oferta e preço](https://amuletodeprotecao.com.br/index.html.md#oferta): Preço (R$ 32), o que está incluído, acesso vitalício e o que não acompanha o produto
+- [Garantia de 7 dias](https://amuletodeprotecao.com.br/index.html.md#garantia): Condições de reembolso incondicional
+- [Perguntas frequentes](https://amuletodeprotecao.com.br/index.html.md#faq): Diferença entre limpar/purificar/consagrar, objetos permitidos, duração, materiais e entrega
+
+## Optional
+
+- [Página HTML canônica](https://amuletodeprotecao.com.br/): Landing page completa para humanos (HTML com estilos e scripts)
+- [Checkout Hotmart](https://pay.hotmart.com/C106868016O): Link de compra do guia digital

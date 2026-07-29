@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Índice curado para LLMs (especificação https://llmstxt.org/)
+# https://amuletodeprotecao.com.br/llms.txt
+
+Sitemap: https://amuletodeprotecao.com.br/sitemap.xml
