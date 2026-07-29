@@ -129,4 +129,5 @@ Acesso digital liberado após confirmação do pagamento. É possível baixar o 
 
 - Site: [https://amuletodeprotecao.com.br/](https://amuletodeprotecao.com.br/)
 - Compra: [https://pay.hotmart.com/C106868016O](https://pay.hotmart.com/C106868016O)
+- Instagram: [@rituaisdeproteção](https://www.instagram.com/rituaisdeprotecao/)
 - Índice LLM do site: [https://amuletodeprotecao.com.br/llms.txt](https://amuletodeprotecao.com.br/llms.txt)
