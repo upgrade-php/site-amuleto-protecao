@@ -74,6 +74,13 @@
       href="./assets/hero-bg.webp"
       fetchpriority="high"
     />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./assets/fonts/cormorant-garamond-500.woff2"
+      crossorigin
+    />
 
     <!-- Google Tag Manager (não roda em local) -->
     <script>
@@ -100,28 +107,68 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <script src="./support.js"></script>
-    <script src="./track.js"></script>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) — irrelevante com JS; em local o script do head não carrega o GTM -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-M7HN4MCV"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <x-dc>
-      <helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
-          rel="stylesheet"
-        />
-        <style>
+    <style>
+          @font-face {
+            font-family: "Cormorant Garamond";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("./assets/fonts/cormorant-garamond-400.woff2")
+              format("woff2");
+          }
+          @font-face {
+            font-family: "Cormorant Garamond";
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url("./assets/fonts/cormorant-garamond-400-italic.woff2")
+              format("woff2");
+          }
+          @font-face {
+            font-family: "Cormorant Garamond";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url("./assets/fonts/cormorant-garamond-500.woff2")
+              format("woff2");
+          }
+          @font-face {
+            font-family: "Cormorant Garamond";
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url("./assets/fonts/cormorant-garamond-600.woff2")
+              format("woff2");
+          }
+          @font-face {
+            font-family: "EB Garamond";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("./assets/fonts/eb-garamond-400.woff2") format("woff2");
+          }
+          @font-face {
+            font-family: "EB Garamond";
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url("./assets/fonts/eb-garamond-400-italic.woff2")
+              format("woff2");
+          }
+          @font-face {
+            font-family: "EB Garamond";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url("./assets/fonts/eb-garamond-500.woff2") format("woff2");
+          }
+          @font-face {
+            font-family: "EB Garamond";
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url("./assets/fonts/eb-garamond-600.woff2") format("woff2");
+          }
           body {
             margin: 0;
             background: #fff;
@@ -180,7 +227,7 @@
             box-sizing: border-box;
             font-family: "EB Garamond", serif;
             font-size: 17px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             text-decoration: none;
@@ -227,6 +274,22 @@
           #faq details {
             border-bottom: 1px solid oklch(55% 0.02 60 / 0.3);
             padding: 0;
+          }
+
+          details.page-index > summary {
+            list-style: none;
+          }
+          details.page-index > summary::-webkit-details-marker {
+            display: none;
+          }
+          details.page-index:not([open]) > summary {
+            margin-bottom: 0;
+          }
+          details.page-index[open] .page-index-chevron {
+            transform: rotate(180deg);
+          }
+          details.page-index:not([open]) .page-index-chevron {
+            transform: rotate(0deg);
           }
           #faq details:last-child {
             border-bottom: none;
@@ -499,10 +562,21 @@
             text-transform: uppercase;
             letter-spacing: 0.02em;
           }
-        </style>
-      </helmet>
-
-      <main id="page-content" style="background: #fff; min-height: 100vh">
+    </style>
+    <script defer src="./track.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) — irrelevante com JS; em local o script do head não carrega o GTM -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-M7HN4MCV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main id="page-content" style="background: #fff; min-height: 100vh">
         <div
           style="
             background: oklch(42% 0.16 25);
@@ -726,44 +800,55 @@
           "
         >
           <nav aria-label="Índice da página">
-            <button
-              type="button"
-              onClick="{{ toggleIndex }}"
-              aria-expanded="{{ indexAriaExpanded }}"
-              aria-controls="indice-lista"
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-                width: 100%;
-                background: none;
-                border: none;
-                cursor: pointer;
-                padding: 0;
-                margin-bottom: 24px;
-              "
-            >
-              <span
+            <details open class="page-index">
+              <summary
                 style="
-                  font-family: &quot;EB Garamond&quot;, serif;
-                  font-size: 13px;
-                  letter-spacing: 0.2em;
-                  text-transform: uppercase;
-                  color: oklch(42% 0.12 75);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                  width: 100%;
+                  background: none;
+                  border: none;
+                  cursor: pointer;
+                  padding: 0;
+                  margin-bottom: 24px;
+                  list-style: none;
                 "
-                >Índice</span
               >
-              <span
-                aria-hidden="true"
-                style="font-size:12px; color:oklch(42% 0.12 75); transform:{{ chevronTransform }}; transition:transform 0.2s;"
-                >▾</span
+                <span
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 13px;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    color: oklch(42% 0.12 75);
+                  "
+                  >Índice</span
+                >
+                <span
+                  class="page-index-chevron"
+                  aria-hidden="true"
+                  style="
+                    font-size: 12px;
+                    color: oklch(42% 0.12 75);
+                    transition: transform 0.2s;
+                  "
+                  >▾</span
+                >
+              </summary>
+              <ol
+                id="indice-lista"
+                style="
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 14px;
+                  counter-reset: idx;
+                "
               >
-            </button>
-            <ol
-              id="indice-lista"
-              style="list-style:none; padding:0; margin:0; display:{{ indexDisplay }}; flex-direction:column; gap:14px; counter-reset:idx;"
-            >
               <li
                 style="
                   display: flex;
@@ -1184,6 +1269,7 @@
                 >
               </li>
             </ol>
+            </details>
           </nav>
         </section>
 
@@ -4142,19 +4228,5 @@
           >Instagram · @rituaisdeproteção</a
         >
       </footer>
-    </x-dc>
-    <script type="text/x-dc" data-dc-script>
-      class Component extends DCLogic {
-        state = { indexOpen: true };
-        renderVals() {
-          return {
-            indexDisplay: this.state.indexOpen ? 'flex' : 'none',
-            chevronTransform: this.state.indexOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            indexAriaExpanded: this.state.indexOpen ? 'true' : 'false',
-            toggleIndex: () => this.setState(s => ({ indexOpen: !s.indexOpen }))
-          };
-        }
-      }
-    </script>
-  </body>
+</body>
 </html>
