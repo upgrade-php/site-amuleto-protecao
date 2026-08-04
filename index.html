@@ -201,6 +201,9 @@
           a.cta-btn-green:focus-visible {
             outline-color: oklch(70% 0.12 145);
           }
+          a.cta-btn-gold:focus-visible {
+            outline-color: oklch(55% 0.12 75);
+          }
           ::selection {
             background: oklch(50% 0.12 75 / 0.3);
           }
@@ -260,6 +263,52 @@
           a.cta-btn-green:active {
             transform: translateY(0);
             box-shadow: 0 4px 12px oklch(35% 0.1 145 / 0.3);
+          }
+          a.cta-btn-gold {
+            display: flex;
+            width: fit-content;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-sizing: border-box;
+            font-family: "EB Garamond", serif;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            color: oklch(98% 0.01 75);
+            background: linear-gradient(
+              135deg,
+              oklch(52% 0.12 75),
+              oklch(40% 0.1 75)
+            );
+            padding: 18px 36px;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 0 6px 18px oklch(40% 0.1 75 / 0.35);
+            transition:
+              transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background 0.2s ease;
+          }
+          a.cta-btn-gold:hover {
+            color: oklch(99% 0.01 75);
+            background: linear-gradient(
+              135deg,
+              oklch(56% 0.13 75),
+              oklch(44% 0.11 75)
+            );
+            transform: translateY(-2px);
+            box-shadow: 0 10px 26px oklch(40% 0.1 75 / 0.45);
+          }
+          a.cta-btn-gold:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px oklch(40% 0.1 75 / 0.3);
           }
           .cta-tagline {
             text-align: center;
@@ -765,25 +814,7 @@
               </li>
             </ul>
 
-            <a
-              href="#guia"
-              style="
-                display: flex;
-                width: fit-content;
-                margin-left: auto;
-                margin-right: auto;
-                align-items: center;
-                gap: 8px;
-                font-family: &quot;EB Garamond&quot;, serif;
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                text-decoration: none;
-                color: oklch(80% 0.13 75);
-                border-bottom: 1px solid oklch(80% 0.13 75 / 0.4);
-                padding-bottom: 4px;
-              "
+            <a href="#guia" class="cta-btn-gold"
               >Quero Transformar Agora →</a
             >
           </div>
@@ -1444,25 +1475,7 @@
                 </p>
               </div>
             </div>
-            <a
-              href="#guia"
-              style="
-                display: flex;
-                width: fit-content;
-                margin-left: auto;
-                margin-right: auto;
-                align-items: center;
-                gap: 8px;
-                font-family: &quot;EB Garamond&quot;, serif;
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                text-decoration: none;
-                color: oklch(48% 0.16 25);
-                border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
-                padding-bottom: 4px;
-              "
+            <a href="#guia" class="cta-btn-gold"
               >Quero Evitar Esses Sinais →</a
             >
             <p class="cta-tagline">
@@ -1630,25 +1643,7 @@
             Interromper esse ciclo devolve o descanso à sua noite e mais
             segurança ao seu próximo dia de trabalho.
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(48% 0.16 25);
-              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero interromper esse ciclo →</a
           >
           <p class="cta-tagline">
@@ -1750,25 +1745,7 @@
             Por isso, o alívio dura só até você pegar a mesma ferramenta na
             manhã seguinte para trabalhar.
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(48% 0.16 25);
-              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero proteção completa →</a
           >
           <p class="cta-tagline">
@@ -1935,25 +1912,7 @@
             Purifique sua ferramenta para interromper o contato com as energias
             passadas e abrir espaço para uma nova proteção.
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(48% 0.16 25);
-              border-bottom: 1px solid oklch(68% 0.16 25 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero limpar minha ferramenta →</a
           >
           <p class="cta-tagline">
@@ -2135,25 +2094,7 @@
               </p>
             </div>
           </div>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(42% 0.12 75);
-              border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero meu amuleto →</a
           >
           <p class="cta-tagline">
@@ -2320,25 +2261,7 @@
             começa o atendimento
             <u>protegido pelo próprio objeto que segura nas mãos</u>
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(42% 0.12 75);
-              border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero proteção no trabalho →</a
           >
           <p class="cta-tagline">
@@ -2454,25 +2377,7 @@
               </p>
             </div>
           </div>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(42% 0.12 75);
-              border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero mais proteção →</a
           >
           <p class="cta-tagline">
@@ -2643,25 +2548,7 @@
             sequência pronta e o transforma em uma âncora alinhada à sua
             intenção de proteção.
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(42% 0.12 75);
-              border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero o atalho →</a
           >
           <p class="cta-tagline">
@@ -2900,25 +2787,7 @@
               acrescentando e como cada movimento prepara a ferramenta para
               sustentar sua proteção.
             </p>
-            <a
-              href="#guia"
-              style="
-                display: flex;
-                width: fit-content;
-                margin-left: auto;
-                margin-right: auto;
-                align-items: center;
-                gap: 8px;
-                font-family: &quot;EB Garamond&quot;, serif;
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: 0.1em;
-                text-transform: uppercase;
-                text-decoration: none;
-                color: oklch(42% 0.12 75);
-                border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-                padding-bottom: 4px;
-              "
+            <a href="#guia" class="cta-btn-gold"
               >Quero ativar os elementos →</a
             >
             <p class="cta-tagline">
@@ -3086,25 +2955,7 @@
             Você purifica as energias passadas e firma uma nova proteção sobre
             sua ferramenta para os próximos contatos.
           </p>
-          <a
-            href="#guia"
-            style="
-              display: flex;
-              width: fit-content;
-              margin-left: auto;
-              margin-right: auto;
-              align-items: center;
-              gap: 8px;
-              font-family: &quot;EB Garamond&quot;, serif;
-              font-size: 16px;
-              font-weight: 600;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              text-decoration: none;
-              color: oklch(42% 0.12 75);
-              border-bottom: 1px solid oklch(50% 0.12 75 / 0.4);
-              padding-bottom: 4px;
-            "
+          <a href="#guia" class="cta-btn-gold"
             >Quero completar a proteção →</a
           >
           <p class="cta-tagline">
