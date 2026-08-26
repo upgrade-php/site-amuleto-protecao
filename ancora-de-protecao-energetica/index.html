@@ -600,6 +600,60 @@
         color: oklch(97% 0.008 60);
       }
 
+      .audience-subtitle {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.3;
+        color: oklch(12% 0.015 60);
+        margin: 28px 0 14px;
+        text-align: left;
+      }
+      .zebra-dark .audience-subtitle {
+        color: oklch(97% 0.008 60);
+      }
+      .audience-list {
+        list-style: none;
+        margin: 0 0 8px;
+        padding: 0;
+        text-align: left;
+      }
+      .audience-list li {
+        font-family: "EB Garamond", serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: oklch(28% 0.014 60);
+        padding: 0 0 12px 26px;
+        position: relative;
+      }
+      .audience-list li::before {
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .audience-list--yes li::before {
+        content: "✓";
+        color: oklch(42% 0.12 75);
+      }
+      .audience-list--no li::before {
+        content: "✕";
+        color: oklch(45% 0.12 25);
+      }
+      .zebra-dark .audience-list li {
+        color: oklch(88% 0.015 60);
+      }
+      .zebra-dark .audience-list--yes li::before {
+        color: oklch(80% 0.13 75);
+      }
+      .zebra-dark .audience-list--no li::before {
+        color: oklch(72% 0.1 25);
+      }
+      .audience-list--no {
+        margin-bottom: 32px;
+      }
+
       #oferta-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -690,6 +744,9 @@
       <!-- HERO -->
       <section id="hero" class="zebra zebra-light" aria-labelledby="hero-title">
         <div class="zebra-inner">
+          <p class="section-kicker">
+            Ritual de 45 minutos para amuletos de proteção pessoal
+          </p>
           <div class="hero-cover">
             <img
               src="../assets/ebook-cover.webp"
@@ -715,8 +772,7 @@
             >Quero Garantir meu Guia Agora</a
           >
           <p class="cta-tagline">
-            Garanta seu guia agora por R$&nbsp;32 e receba o acesso no seu
-            e-mail, em poucos minutos, direto da Hotmart.
+            Ao final do dia, o único peso nos ombros é o da própria roupa.
           </p>
         </div>
       </section>
@@ -732,9 +788,7 @@
           <h2 id="beneficios-title" class="section-title">
             O Que Este Guia Proporciona
           </h2>
-          <p class="body-text" style="margin-bottom: 24px">
-            Você vai:
-          </p>
+          <p class="body-text" style="margin-bottom: 24px">Você vai:</p>
           <ol class="benefit-list">
             <li>
               Dominar um passo a passo seguro para consagrar um objeto do início
@@ -776,7 +830,8 @@
             >Quero Garantir meu Guia Agora</a
           >
           <p class="cta-tagline">
-            O acesso chega no seu e-mail assim que o pagamento é confirmado.
+            Apenas 45 minutos entre abrir a primeira página e ter a prática
+            finalizada.
           </p>
         </div>
       </section>
@@ -826,7 +881,8 @@
               <strong>Objetos de Decoração e Proteção Lar</strong>
               Além de acessórios pessoais, você aprende a consagrar objetos para
               proteger a casa (como cristais de ambiente, móbiles, chaves ou
-              estátuas), selando as entradas e os cômodos contra energias densas.
+              estátuas), selando as entradas e os cômodos contra energias
+              densas.
             </li>
           </ul>
           <a
@@ -834,13 +890,56 @@
             class="cta-btn-green"
             >Quero Aprender a Consagrar Meus Objetos Agora</a
           >
+          <p class="cta-tagline">
+            O anel que já está no dedo passa a cumprir uma função além do
+            visual.
+          </p>
+        </div>
+      </section>
+
+      <!-- PARA QUEM É -->
+      <section
+        id="para-quem"
+        class="zebra zebra-dark"
+        aria-labelledby="para-quem-title"
+      >
+        <div class="zebra-inner">
+          <h2 id="para-quem-title" class="section-title">
+            Para Quem É (e Para Quem Não É) Este Guia
+          </h2>
+          <p class="body-text">
+            Este guia é para quem já assumiu o compromisso de cuidar da própria
+            proteção energética e espiritual.
+          </p>
+          <h3 class="audience-subtitle">É para você que:</h3>
+          <ul class="audience-list audience-list--yes">
+            <li>Usa anéis, colares ou pulseiras no dia a dia.</li>
+            <li>Quer fortalecer sua proteção espiritual.</li>
+            <li>Quer se libertar de interferências energéticas.</li>
+            <li>Quer carregar um amuleto consagrado por você.</li>
+          </ul>
+          <h3 class="audience-subtitle">Não é para você que:</h3>
+          <ul class="audience-list audience-list--no">
+            <li>Não usa nem pretende usar acessórios pessoais.</li>
+            <li>Não vê necessidade de proteção espiritual.</li>
+            <li>Não acredita que interferências energéticas o(a) afetam.</li>
+          </ul>
+          <a
+            href="https://pay.hotmart.com/C106868016O?bid=1784917409633&checkoutMode=10"
+            class="cta-btn-green"
+            >Quero Garantir meu Guia Agora</a
+          >
+          <p class="cta-tagline">
+            A sensação de atravessar ambientes carregados e voltar para casa
+            intacto.
+          </p>
         </div>
       </section>
 
       <!-- STORYTELLING -->
       <section
         id="historia"
-        class="zebra zebra-dark"
+        class="zebra zebra-light"
         aria-labelledby="historia-title"
       >
         <div class="zebra-inner">
@@ -885,6 +984,9 @@
             class="cta-btn-green"
             >Quero Garantir meu Guia Agora</a
           >
+          <p class="cta-tagline">
+            O controle da própria atmosfera sem depender da resposta de ninguém.
+          </p>
         </div>
       </section>
 
@@ -1067,8 +1169,8 @@
               >Quero Garantir meu Guia Agora</a
             >
             <p class="cta-tagline" style="color: oklch(78% 0.015 60)">
-              Assim que o pagamento é confirmado na Hotmart, o acesso chega
-              direto no seu e-mail.
+              Menos do que o valor de um almoço para mudar o que se carrega no
+              corpo.
             </p>
             <p
               style="
@@ -1126,8 +1228,8 @@
                   >Quero Garantir meu Guia Agora</a
                 >
                 <p class="cta-tagline">
-                  Garanta agora por R$&nbsp;32, pagamento único, acesso direto
-                  no seu e-mail após a confirmação.
+                  Seis passos simples separam o estado atual de um campo
+                  totalmente selado.
                 </p>
               </div>
             </div>
