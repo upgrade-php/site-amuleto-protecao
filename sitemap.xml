@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://amuletodeprotecao.com.br/ancora-de-protecao-energetica/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://amuletodeprotecao.com.br/llms.txt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
