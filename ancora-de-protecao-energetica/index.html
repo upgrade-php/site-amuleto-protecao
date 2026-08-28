@@ -681,6 +681,9 @@
         #oferta-grid {
           grid-template-columns: 1fr 1fr;
         }
+        #oferta-grid > :last-child {
+          grid-column: 1 / -1;
+        }
       }
 
       .split {
@@ -742,6 +745,26 @@
         margin: 0 0 20px;
         text-transform: uppercase;
         letter-spacing: 0.02em;
+      }
+
+      #bonus .bonus-cover {
+        max-width: 280px;
+        margin: 0 auto 32px;
+      }
+      #bonus .bonus-cover img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 4px;
+        box-shadow: 0 12px 32px oklch(20% 0.02 60 / 0.16);
+      }
+      @media (min-width: 720px) {
+        #bonus .split.split-rl > .split-media.bonus-cover {
+          flex: 0 0 240px;
+          max-width: 240px;
+          margin: 0;
+        }
       }
     </style>
     <script defer src="../track.js"></script>
@@ -1035,6 +1058,42 @@
         </div>
       </section>
 
+      <!-- BÔNUS -->
+      <section
+        id="bonus"
+        class="zebra zebra-warm"
+        aria-labelledby="bonus-title"
+      >
+        <div class="zebra-inner">
+          <p class="section-kicker">Bônus</p>
+          <h2 id="bonus-title" class="section-title">
+            Limpeza Energética com Ervas
+          </h2>
+          <div class="split split-rl">
+            <div class="split-media bonus-cover">
+              <img
+                src="../assets/UmGuiaPraticodeBanhosErvaseIntencao.webp"
+                alt="Capa do bônus Limpeza Energética com Ervas — Um Guia Prático de Banhos, Ervas e Intenção"
+                width="900"
+                height="1436"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="split-body">
+              <p class="body-text">
+                Aprenda a preparar banhos com ervas para aliviar o peso
+                acumulado, renovar suas energias e recuperar a sensação de
+                leveza.
+              </p>
+              <p class="body-text">
+                Incluído no mesmo acesso, sem custo adicional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- OFERTA -->
       <section
         id="oferta"
@@ -1072,7 +1131,8 @@
             >
               Você recebe o guia completo
               <em>Âncora de Proteção Energética</em>, em PDF, por download
-              imediato.
+              imediato — e de bônus o guia
+              <em>Limpeza Energética com Ervas</em>.
             </p>
 
             <div
@@ -1203,6 +1263,27 @@
                     >Preservação do Equilíbrio</strong
                   >
                   — Crie sua âncora de proteção, paz e harmonia.
+                </p>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start">
+                <span
+                  aria-hidden="true"
+                  style="color: #c5a059; font-size: 14px; margin-top: 3px"
+                  >✦</span
+                >
+                <p
+                  style="
+                    font-family: &quot;EB Garamond&quot;, serif;
+                    font-size: 18px;
+                    line-height: 1.6;
+                    color: oklch(88% 0.012 60);
+                    margin: 0;
+                  "
+                >
+                  <strong style="color: oklch(96% 0.008 60)"
+                    >Bônus: Limpeza Energética com Ervas</strong
+                  >
+                  — Banhos para aliviar o peso acumulado e recuperar a leveza.
                 </p>
               </div>
             </div>
