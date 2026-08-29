@@ -502,8 +502,30 @@
         font-size: 18px;
         line-height: 1.6;
         color: oklch(28% 0.014 60);
-        margin: 0 auto 32px;
+        margin: 0 auto 24px;
         max-width: 36em;
+      }
+      .hero-price {
+        margin: 0 auto 28px;
+        text-align: center;
+      }
+      .hero-price-label {
+        display: block;
+        font-family: "EB Garamond", serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: oklch(42% 0.12 75);
+        margin-bottom: 6px;
+      }
+      .hero-price-value {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: clamp(36px, 6vw, 48px);
+        line-height: 1;
+        color: oklch(42% 0.14 70);
       }
 
       .section-kicker {
@@ -806,6 +828,10 @@
             Descubra como proteger sua energia espiritual no dia a dia através
             de um guia prático que ensina, etapa por etapa, um ritual místico de
             45 minutos.
+          </p>
+          <p class="hero-price">
+            <span class="hero-price-label">Por apenas</span>
+            <span class="hero-price-value">R$ 32</span>
           </p>
           <a
             href="https://pay.hotmart.com/C106868016O?bid=1784917409633&checkoutMode=10"
