@@ -788,6 +788,85 @@
           margin: 0;
         }
       }
+
+      #ciencia-tradicao.zebra-warm {
+        background:
+          radial-gradient(
+            ellipse 55% 45% at 50% 52%,
+            oklch(99% 0.015 85 / 0.95),
+            transparent 68%
+          ),
+          radial-gradient(
+            ellipse 80% 60% at 50% 0%,
+            oklch(97% 0.02 75 / 0.9),
+            transparent 70%
+          ),
+          linear-gradient(180deg, oklch(96% 0.018 70), oklch(93.5% 0.022 65));
+      }
+      #page-content > section#ciencia-tradicao > .zebra-inner {
+        max-width: 1080px;
+      }
+      #ciencia-tradicao .section-title {
+        max-width: 18em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        font-size: clamp(24px, 4vw, 32px);
+      }
+      .ciencia-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 0 0 40px;
+        padding: 0;
+        list-style: none;
+      }
+      @media (min-width: 900px) {
+        .ciencia-cards {
+          grid-template-columns: repeat(3, 1fr);
+          align-items: stretch;
+        }
+      }
+      .ciencia-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        background: #fff;
+        border: 1.5px solid oklch(72% 0.08 80);
+        border-radius: 16px;
+        padding: 24px 20px 28px;
+        text-align: center;
+        box-shadow: 0 8px 24px oklch(30% 0.02 60 / 0.08);
+      }
+      .ciencia-card-visual {
+        margin: 0 auto 16px;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 3 / 2;
+      }
+      .ciencia-card-visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .ciencia-card-title {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.3;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: oklch(12% 0.015 60);
+        margin: 0 0 12px;
+      }
+      .ciencia-card-text {
+        font-family: "EB Garamond", serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: oklch(28% 0.014 60);
+        margin: 0;
+      }
     </style>
     <script defer src="../track.js"></script>
   </head>
@@ -841,6 +920,77 @@
           <p class="cta-tagline">
             Ao final do dia, o único peso nos ombros é o da própria roupa.
           </p>
+        </div>
+      </section>
+
+      <!-- CIÊNCIA E TRADIÇÃO -->
+      <section
+        id="ciencia-tradicao"
+        class="zebra zebra-warm"
+        aria-labelledby="ciencia-tradicao-title"
+      >
+        <div class="zebra-inner">
+          <h2 id="ciencia-tradicao-title" class="section-title">
+            O que a ciência e a tradição dizem sobre proteção energética
+          </h2>
+          <div class="ciencia-cards">
+            <article class="ciencia-card">
+              <div class="ciencia-card-visual">
+                <img
+                  src="../assets/ciencia-card-esgotamento.webp"
+                  alt="Pessoa sobrecarregada ao lado de um escudo de proteção"
+                  width="1012"
+                  height="675"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="ciencia-card-title">A realidade do esgotamento</h3>
+              <p class="ciencia-card-text">
+                De acordo com estudos da OMS, mais de 70% da população
+                brasileira sofre com estresse diário. Ambientes carregados e
+                interações sugam sua energia. Crie uma barreira consciente.
+              </p>
+            </article>
+            <article class="ciencia-card">
+              <div class="ciencia-card-visual">
+                <img
+                  src="../assets/ciencia-card-ancoragem.webp"
+                  alt="Neurônio, símbolo de âncora e cérebro com um coração"
+                  width="1012"
+                  height="675"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="ciencia-card-title">A ciência da ancoragem</h3>
+              <p class="ciencia-card-text">
+                Estudos de psicologia comportamental validam que objetos
+                intencionais funcionam como âncoras. Usar um acessório
+                consagrado ativará instantaneamente calma, foco e proteção.
+              </p>
+            </article>
+            <article class="ciencia-card">
+              <div class="ciencia-card-visual">
+                <img
+                  src="../assets/ciencia-card-tradicao.webp"
+                  alt="Papiro com o Ankh e um escudo sobre um relevo ancestral"
+                  width="1012"
+                  height="675"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="ciencia-card-title">O valor da tradição</h3>
+              <p class="ciencia-card-text">
+                A consagração é uma prática ancestral para firmar intenções.
+                Milhares de pessoas utilizam âncoras físicas para retomar o
+                controle de suas vidas com apenas 45 minutos.
+              </p>
+            </article>
+          </div>
+          <a
+            href="https://pay.hotmart.com/C106868016O?bid=1784917409633&checkoutMode=10"
+            class="cta-btn-green"
+            >Quero Garantir meu Guia Agora</a
+          >
         </div>
       </section>
 
